@@ -2,61 +2,88 @@
 'use client';
 
 export default function Hero() {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
-    <section id="home" className="min-h-screen bg-gradient-to-br from-yellow-50 to-yellow-200 flex items-center relative overflow-hidden">
-      {/* Animated background pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="w-full h-full bg-repeat animate-float" 
-             style={{
-               backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FFD700' fill-opacity='0.3'%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-             }}
-        />
+    <section className="px-12 py-16 grid grid-cols-2 gap-16 items-center min-h-[80vh]">
+      {/* Left Content */}
+      <div className="space-y-8">
+        <div>
+          <h1 className="text-6xl font-bold text-gray-800 leading-tight mb-6">
+            Hey There,<br />
+            I'm Aakash
+          </h1>
+          <p className="text-lg text-gray-600 mb-8">
+            I create beautiful, functional, and user-centered digital experiences with React.js and Next.js.
+            And I love what I do.
+          </p>
+          <p className="text-orange-500 font-medium">
+            aakash.singh@gmail.com
+          </p>
+        </div>
+
+        {/* Experience Badge */}
+        <div className="flex items-center space-x-8">
+          <div>
+            <div className="text-6xl font-bold text-gray-800">3+</div>
+            <div className="text-sm text-gray-600 uppercase tracking-wide">
+              YEARS<br />EXPERIENCE
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-8 grid md:grid-cols-2 gap-16 items-center relative z-10">
-        <div className="space-y-6">
-          <h1 className="text-5xl md:text-6xl font-black bg-gradient-to-r from-gray-800 to-yellow-600 bg-clip-text text-transparent leading-tight">
-            Hi, I'm Aakash Singh
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-600 font-light">
-            Frontend Developer | React.js & Next.js Specialist
-          </p>
-          <p className="text-lg text-gray-600 leading-relaxed">
-            I create beautiful, functional, and user-centered digital experiences with React.js and Next.js. 
-            With expertise in modern frontend technologies and a passion for clean, responsive design, 
-            I bring ideas to life through elegant code.
-          </p>
-          
-          <div className="flex flex-wrap gap-4 pt-4">
-            <button
-              onClick={() => scrollToSection('projects')}
-              className="bg-yellow-400 hover:bg-yellow-500 text-gray-800 px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl"
-            >
-              View My Work
-            </button>
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="border-2 border-yellow-400 hover:bg-yellow-400 text-gray-800 px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:-translate-y-1"
-            >
-              Get In Touch
-            </button>
+      {/* Right Content - Profile Image */}
+      <div className="relative">
+        {/* Artistic Paint Strokes Background */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <svg width="400" height="400" viewBox="0 0 400 400" className="absolute">
+            <defs>
+              <linearGradient id="paintGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#2D7D7D" />
+                <stop offset="100%" stopColor="#4A9D9D" />
+              </linearGradient>
+            </defs>
+            {/* Paint stroke paths */}
+            <path
+              d="M50 100 Q150 80 250 120 Q350 140 380 200 Q360 250 300 280 Q200 300 150 250 Q100 200 50 150 Z"
+              fill="url(#paintGradient)"
+              opacity="0.8"
+            />
+            <path
+              d="M80 150 Q180 130 280 170 Q320 200 300 250 Q250 280 200 260 Q150 240 120 200 Z"
+              fill="url(#paintGradient)"
+              opacity="0.6"
+            />
+            <path
+              d="M120 200 Q220 180 320 220 Q350 250 320 300 Q270 320 220 300 Q170 280 120 250 Z"
+              fill="url(#paintGradient)"
+              opacity="0.4"
+            />
+          </svg>
+        </div>
+
+        {/* Profile Image Placeholder */}
+        <div className="relative z-10 flex items-center justify-center">
+          <div className="w-80 h-80 bg-yellow-400 rounded-full flex items-center justify-center overflow-hidden">
+            <div className="text-8xl">👨‍💻</div>
           </div>
         </div>
 
-        <div className="flex justify-center">
-          <div className="bg-white p-8 rounded-3xl shadow-2xl transform rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300">
-            <div className="w-48 h-48 bg-gradient-to-br from-yellow-400 to-yellow-300 rounded-full flex items-center justify-center text-6xl mb-4">
-              👨‍💻
+        {/* Certification Badge */}
+        <div className="absolute bottom-8 right-8 bg-white rounded-full p-4 shadow-lg">
+          <div className="w-16 h-16 flex items-center justify-center">
+            <div className="text-center">
+              <div className="w-8 h-8 bg-gray-800 rounded-full mx-auto mb-1 flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              </div>
+              <div className="text-xs text-gray-800 font-bold leading-tight">
+                REACT & NEXTJS<br />
+                SPECIALIST<br />
+                FRONTEND<br />
+                DEVELOPER
+              </div>
             </div>
-            <h3 className="text-2xl font-bold text-center mb-2">Aakash Singh</h3>
-            <p className="text-gray-600 text-center">Frontend Developer</p>
           </div>
         </div>
       </div>

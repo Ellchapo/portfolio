@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Aakash Singh - Frontend Developer Portfolio',
-  description: 'Frontend Developer specializing in React.js and Next.js. View my projects and get in touch.',
+  description: 'Frontend Developer specializing in React.js and Next.js. Creating beautiful digital experiences.',
 }
 
 export default function RootLayout({

@@ -1,19 +1,8 @@
+
 // app/components/Contact.tsx
 'use client';
 
 import { useState } from 'react';
-
-interface ContactInfo {
-  icon: string;
-  title: string;
-  value: string;
-}
-
-const contactInfo: ContactInfo[] = [
-  { icon: '📧', title: 'Email', value: 'aakash.singh@example.com' },
-  { icon: '📱', title: 'Phone', value: '+1 (555) 123-4567' },
-  { icon: '📍', title: 'Location', value: 'Your City, Country' }
-];
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -36,85 +25,99 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-white">
-      <div className="max-w-6xl mx-auto px-8">
+    <section className="px-12 py-16 bg-gray-900 text-white rounded-t-3xl mt-16">
+      <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+          <h2 className="text-4xl font-bold mb-4">
             Let's Work Together
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-300">
             Have a project in mind? Let's discuss how we can bring your ideas to life.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-16">
-          <div className="space-y-8">
-            {contactInfo.map((info, index) => (
-              <div key={index} className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center text-xl">
-                  {info.icon}
+        <div className="grid md:grid-cols-2 gap-12">
+          <div>
+            <h3 className="text-2xl font-bold mb-6">Get In Touch</h3>
+            <div className="space-y-4">
+              <div className="flex items-center space-x-4">
+                <div className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center text-gray-900">
+                  📧
                 </div>
-                <div>
-                  <h4 className="font-semibold text-lg">{info.title}</h4>
-                  <p className="text-gray-600">{info.value}</p>
-                </div>
+                <span>aakash.singh@gmail.com</span>
               </div>
-            ))}
+              <div className="flex items-center space-x-4">
+                <div className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center text-gray-900">
+                  📱
+                </div>
+                <span>+91 9876543210</span>
+              </div>
+              <div className="flex items-center space-x-4">
+                <div className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center text-gray-900">
+                  📍
+                </div>
+                <span>India</span>
+              </div>
+            </div>
+
+            <div className="mt-8 flex space-x-4">
+              <a href="https://github.com/Ellchapo" className="w-10 h-10 bg-yellow-400 text-gray-900 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors">
+                🐙
+              </a>
+              <a href="#" className="w-10 h-10 bg-yellow-400 text-gray-900 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors">
+                💼
+              </a>
+              <a href="#" className="w-10 h-10 bg-yellow-400 text-gray-900 rounded-full flex items-center justify-center hover:bg-yellow-500 transition-colors">
+                🐦
+              </a>
+            </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="bg-yellow-50 p-8 rounded-2xl">
-            <div className="mb-6">
-              <label htmlFor="name" className="block text-sm font-semibold mb-2">
-                Name
-              </label>
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div>
               <input
                 type="text"
-                id="name"
                 name="name"
+                placeholder="Your Name"
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-yellow-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-yellow-400 text-white placeholder-gray-400"
               />
             </div>
-
-            <div className="mb-6">
-              <label htmlFor="email" className="block text-sm font-semibold mb-2">
-                Email
-              </label>
+            <div>
               <input
                 type="email"
-                id="email"
                 name="email"
+                placeholder="Your Email"
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-yellow-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-yellow-400 text-white placeholder-gray-400"
               />
             </div>
-
-            <div className="mb-6">
-              <label htmlFor="message" className="block text-sm font-semibold mb-2">
-                Message
-              </label>
+            <div>
               <textarea
-                id="message"
                 name="message"
+                placeholder="Your Message"
+                rows={5}
                 value={formData.message}
                 onChange={handleChange}
-                rows={5}
                 required
-                className="w-full px-4 py-3 border border-yellow-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 resize-none"
+                className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-yellow-400 text-white placeholder-gray-400 resize-none"
               />
             </div>
-
             <button
               type="submit"
-              className="w-full bg-yellow-400 hover:bg-yellow-500 text-gray-800 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
+              className="w-full bg-yellow-400 text-gray-900 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition-colors"
             >
               Send Message
             </button>
           </form>
+        </div>
+
+        <div className="text-center mt-16 pt-8 border-t border-gray-800">
+          <p className="text-gray-400">© 2024 Aakash Singh. All rights reserved.</p>
         </div>
       </div>
     </section>
