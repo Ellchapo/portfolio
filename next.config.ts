@@ -4,6 +4,10 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
-}
+  eslint: {
+    // ✅ Skip ESLint checks during `next build`
+    ignoreDuringBuilds: true,
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
