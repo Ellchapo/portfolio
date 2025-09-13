@@ -53,7 +53,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="relative px-12 py-16 overflow-hidden">
+    <section className="relative px-12 py-16 overflow-hidden " id="works">
       {/* Subtle animated background elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-20 w-72 h-72 bg-yellow-200 rounded-full filter blur-3xl animate-pulse"></div>

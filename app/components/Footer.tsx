@@ -9,7 +9,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative bg-gray-900 text-white py-12 overflow-hidden">
+    <footer className="relative bg-gray-900 text-white py-12 overflow-hidden" >
       {/* Animated background elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-5 left-10 w-32 h-32 bg-yellow-400 rounded-full filter blur-2xl animate-pulse"></div>

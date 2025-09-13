@@ -31,7 +31,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="relative px-12 py-16 bg-gray-900 text-white rounded-t-3xl mt-16 overflow-hidden">
+    <section className="relative px-12 py-16 bg-gray-900 text-white rounded-t-3xl mt-16 overflow-hidden" id="contact">
       {/* Subtle animated background elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-10 left-10 w-64 h-64 bg-yellow-400 rounded-full filter blur-3xl animate-pulse"></div>

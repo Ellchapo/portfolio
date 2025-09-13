@@ -63,7 +63,7 @@ export default function About() {
 
   return (
     <section 
-      id="about-section"
+       id="services"
       className="relative px-8 lg:px-12 py-20 bg-gradient-to-br from-gray-50 via-white to-teal-50/30 rounded-t-3xl mt-16 overflow-hidden"
     >
       {/* Background decorative elements */}
