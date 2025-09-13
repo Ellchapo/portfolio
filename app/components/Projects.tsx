@@ -1,6 +1,15 @@
 'use client';
 
 const projects = [
+  
+   {
+    title: 'Digital Business Culture',
+    description: 'Modern business website with Next.js and server-side rendering.',
+    image: '🏢',
+    tags: ['Next.js', 'SSR', 'SEO'],
+    liveUrl: 'https://lucent-zuccutto-c1f64c.netlify.app',
+    featured: true
+  },
   {
     title: 'Food Order App',
     description: 'A comprehensive food ordering platform with admin dashboard and order tracking.',
@@ -41,14 +50,7 @@ const projects = [
     liveUrl: 'https://panel.basekamp.co.uk/member/signup',
     featured: false
   },
-  {
-    title: 'Digital Business Culture',
-    description: 'Modern business website with Next.js and server-side rendering.',
-    image: '🏢',
-    tags: ['Next.js', 'SSR', 'SEO'],
-    liveUrl: 'https://lucent-zuccutto-c1f64c.netlify.app',
-    featured: true
-  }
+ 
 ];
 
 export default function Projects() {

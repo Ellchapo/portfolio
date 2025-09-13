@@ -78,13 +78,13 @@ export default function Contact() {
                   <div className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center text-gray-900 group-hover:scale-110 transition-transform duration-200">
                     📧
                   </div>
-                  <span className="group-hover:text-yellow-400 transition-colors">aakash.singh@gmail.com</span>
+                  <span className="group-hover:text-yellow-400 transition-colors">singh.aakash0000@gmail.com</span>
                 </div>
                 <div className="flex items-center space-x-4 p-3 rounded-lg hover:bg-yellow-400/5 transition-colors group">
                   <div className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center text-gray-900 group-hover:scale-110 transition-transform duration-200">
                     📱
                   </div>
-                  <span className="group-hover:text-yellow-400 transition-colors">+91 9876543210</span>
+                  <span className="group-hover:text-yellow-400 transition-colors">+91 9064387318</span>
                 </div>
                 <div className="flex items-center space-x-4 p-3 rounded-lg hover:bg-yellow-400/5 transition-colors group">
                   <div className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center text-gray-900 group-hover:scale-110 transition-transform duration-200">

@@ -96,7 +96,7 @@ export default function Hero() {
             {/* Glassmorphism contact card */}
             <div className="inline-flex items-center space-x-3 bg-white/60 backdrop-blur-md border border-teal-200 rounded-xl px-6 py-3 hover:bg-white/80 transition-all duration-300 group cursor-pointer shadow-lg">
               <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-              <p className="text-teal-700 font-medium">aakash.singh@gmail.com</p>
+              <p className="text-teal-700 font-medium">singh.aakash0000@gmail.com</p>
               <svg className="w-4 h-4 text-teal-600 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
