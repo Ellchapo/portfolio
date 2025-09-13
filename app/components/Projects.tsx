@@ -1,14 +1,13 @@
 'use client';
 
 const projects = [
-  
-   {
+  {
     title: 'Digital Business Culture',
     description: 'Modern business website with Next.js and server-side rendering.',
     image: '🏢',
     tags: ['Next.js', 'SSR', 'SEO'],
     liveUrl: 'https://lucent-zuccutto-c1f64c.netlify.app',
-    featured: true
+    featured: true,
   },
   {
     title: 'Food Order App',
@@ -16,7 +15,7 @@ const projects = [
     image: '🍕',
     tags: ['React.js', 'Admin Panel', 'Full Stack'],
     liveUrl: 'https://dev.admin.digitalbusinessculture.co.za/',
-    featured: true
+    featured: true,
   },
   {
     title: 'TipTop Taxi App',
@@ -24,7 +23,7 @@ const projects = [
     image: '🚕',
     tags: ['React.js', 'Real-time', 'Maps API'],
     liveUrl: 'https://dev.tiptopmaxisydney.com.au',
-    featured: true
+    featured: true,
   },
   {
     title: 'OYB - On Your Bike',
@@ -32,7 +31,7 @@ const projects = [
     image: '🚴',
     tags: ['React.js', 'Responsive', 'UX/UI'],
     liveUrl: 'https://www.onyourbike.com/',
-    featured: false
+    featured: false,
   },
   {
     title: 'MaxBet09',
@@ -40,7 +39,7 @@ const projects = [
     image: '🎰',
     tags: ['React.js', 'Interactive UI', 'Authentication'],
     liveUrl: 'https://maxbet9.fairgame.club/login',
-    featured: false
+    featured: false,
   },
   {
     title: 'Base Kamp',
@@ -48,9 +47,16 @@ const projects = [
     image: '🏕️',
     tags: ['React.js', 'Dashboard', 'Modern UI'],
     liveUrl: 'https://panel.basekamp.co.uk/member/signup',
-    featured: false
+    featured: false,
   },
- 
+  {
+    title: 'GenZ Limousine',
+    description: 'Luxury limousine booking website with sleek design and responsive layout.',
+    image: '🚖',
+    tags: ['Next.js', 'Responsive', 'UI/UX'],
+    liveUrl: 'https://www.genzlimousine.com/',
+    featured: false,
+  },
 ];
 
 export default function Projects() {

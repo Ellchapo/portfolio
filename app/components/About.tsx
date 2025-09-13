@@ -1,4 +1,3 @@
-// app/components/About.tsx
 'use client';
 import { useState, useEffect } from 'react';
 
@@ -46,6 +45,9 @@ export default function About() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   useEffect(() => {
+    // Set visible immediately to ensure content shows
+    setIsVisible(true);
+    
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -55,7 +57,7 @@ export default function About() {
       { threshold: 0.1 }
     );
 
-    const section = document.getElementById('about-section');
+    const section = document.getElementById('services');
     if (section) observer.observe(section);
 
     return () => observer.disconnect();
@@ -64,7 +66,7 @@ export default function About() {
   return (
     <section 
        id="services"
-      className="relative px-8 lg:px-12 py-20 bg-gradient-to-br from-gray-50 via-white to-teal-50/30 rounded-t-3xl mt-16 overflow-hidden"
+       className="relative px-8 lg:px-12 py-20 bg-gradient-to-br from-gray-50 via-white to-teal-50/30 mt-20 overflow-hidden min-h-screen"
     >
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
