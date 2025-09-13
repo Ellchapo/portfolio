@@ -7,6 +7,7 @@ import photo from "../components/assets/Capturebackgrd (1).jpg";
 export default function Hero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isVisible, setIsVisible] = useState(false);
+  const [activeSection, setActiveSection] = useState("services");
 
   useEffect(() => {
     setIsVisible(true);
@@ -16,6 +17,22 @@ export default function Hero() {
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      // Get the navbar height to offset the scroll position
+      const navbarHeight = 80;
+      const elementPosition = element.offsetTop - navbarHeight;
+
+      window.scrollTo({
+        top: elementPosition,
+        behavior: "smooth",
+      });
+
+      setActiveSection(sectionId);
+    }
+  };
 
   return (
     <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100" id='experience'>
@@ -108,8 +125,8 @@ export default function Hero() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="group relative px-8 py-3 bg-gradient-to-r from-teal-600 to-emerald-600 rounded-full font-semibold text-white hover:shadow-2xl hover:shadow-teal-500/25 transition-all duration-300 hover:scale-105">
-                <span className="relative z-10">View My Work</span>
+              <button  onClick={() => scrollToSection("works")} className="group relative px-8 py-3 bg-gradient-to-r from-teal-600 to-emerald-600 rounded-full font-semibold text-white hover:shadow-2xl hover:shadow-teal-500/25 transition-all duration-300 hover:scale-105">
+                <span className="relative z-10" >View My Work</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-teal-700 to-emerald-700 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </button>
               
