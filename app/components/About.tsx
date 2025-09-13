@@ -43,6 +43,7 @@ const skills = [
 export default function About() {
   const [isVisible, setIsVisible] = useState(false);
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  
 
   useEffect(() => {
     // Set visible immediately to ensure content shows
